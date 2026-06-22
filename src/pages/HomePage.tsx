@@ -12,7 +12,6 @@ import { FoundingTeamSection } from '../sections/FoundingTeamSection';
 import { RoadmapSection } from '../sections/RoadmapSection';
 import { FAQSection } from '../sections/FAQSection';
 import { MinigameSection } from '../sections/MinigameSection';
-import { ContactSection } from '../sections/ContactSection';
 
 export const HomePage = () => {
   useEffect(() => {
@@ -52,7 +51,6 @@ export const HomePage = () => {
         <RoadmapSection />
         <FAQSection />
         <MinigameSection />
-        <ContactSection />
       </main>
       <Footer />
     </div>

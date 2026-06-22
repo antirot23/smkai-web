@@ -316,7 +316,12 @@ export const GravityGame = () => {
   return (
     <div className="w-full max-w-sm mx-auto bg-white/50 rounded-3xl border border-border-default p-6 backdrop-blur-md shadow-lg">
       <div className="flex items-center justify-between mb-4">
-        <RotlessText variant="title" className="text-text-primary">AntiRot Shooter</RotlessText>
+        <div 
+          className="text-primary-default font-bold uppercase tracking-widest text-lg"
+          style={{ fontFamily: '"Press Start 2P", "Courier New", Courier, monospace' }}
+        >
+          Anti - Rot shooter
+        </div>
         <div className="bg-bg-dark px-3 py-1 rounded-full border border-white/10 shadow-sm">
           <RotlessText variant="label" className="text-primary-default">Score: {score}</RotlessText>
         </div>

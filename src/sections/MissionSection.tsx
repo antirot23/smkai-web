@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { RotlessText } from '../components/ui/RotlessText';
 import { MISSION_DATA } from '@/constants';
-import appLogo from '@/assets/antirot-app-logo.png';
+import { GravityGame } from '../components/ui/GravityGame';
 
 export const MissionSection = () => {
   return (
@@ -47,20 +47,11 @@ export const MissionSection = () => {
             className="relative h-[450px] lg:h-[600px] w-full rounded-[40px] overflow-hidden shadow-2xl bg-bg-secondary border border-border-subtle flex flex-col items-center justify-center p-8 lg:p-12 group"
           >
             {/* Subtle radial gradient background */}
+            {/* Subtle radial gradient background */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_0%,transparent_70%)]" />
             
-            <motion.div 
-              className="flex-1 w-full flex items-center justify-center relative z-10"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <img src={appLogo} alt="AntiRot App Logo" className="w-[70%] max-w-[320px] h-auto object-contain drop-shadow-xl filter transition-transform duration-700 rounded-3xl" />
-            </motion.div>
-            
-            <div className="mt-8 mb-4 relative z-10">
-              <span className="text-sm md:text-base uppercase tracking-[0.25em] text-text-tertiary font-bold group-hover:text-primary-default transition-colors duration-500">
-                Talk Nerdy To Me.
-              </span>
+            <div className="flex-1 w-full flex flex-col items-center justify-center relative z-10 pt-4">
+              <GravityGame />
             </div>
           </motion.div>
 

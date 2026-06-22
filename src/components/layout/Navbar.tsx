@@ -21,7 +21,7 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -39,15 +39,15 @@ export const Navbar = () => {
         <span className="text-sm font-medium tracking-wide">✨ Antirot Beta is Opening</span>
         <span className="hidden md:inline text-sm opacity-80">- We're looking for early testers to shape the future.</span>
         <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-sm font-bold underline underline-offset-2 hover:opacity-80 transition-opacity flex items-center gap-1">
-          Join Beta <ArrowRight size={14} />
+          Connect on Insta <ArrowRight size={14} />
         </a>
       </motion.div>
 
       {/* Main Navbar */}
       <motion.header
         className={cn(
-          'transition-all duration-300 w-full',
-          isScrolled ? 'bg-bg-primary/90 backdrop-blur-md py-3 shadow-sm border-b border-border-subtle' : 'bg-transparent py-5'
+          'transition-all duration-500 w-full border-b backdrop-blur-md py-4',
+          isScrolled ? 'bg-bg-primary/95 shadow-sm border-border-subtle' : 'bg-transparent border-transparent shadow-none'
         )}
         initial={{ y: -100 }}
         animate={{ y: 0 }}

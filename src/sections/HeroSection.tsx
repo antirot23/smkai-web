@@ -3,12 +3,12 @@ import { RotlessText } from '../components/ui/RotlessText';
 import { Button } from '../components/ui/Button';
 import { HERO_DATA, COMPANY } from '@/constants';
 import { ArrowRight, ChevronDown } from 'lucide-react';
+import { JumboText } from '../components/ui/JumboText';
 
 const INSTAGRAM_URL = "https://www.instagram.com/k_shastri03/";
 
 export const HeroSection = () => {
   const { scrollY } = useScroll();
-  const y1 = useTransform(scrollY, [0, 1000], [0, 250]);
   const opacity = useTransform(scrollY, [0, 600], [1, 0]);
 
   return (
@@ -37,20 +37,25 @@ export const HeroSection = () => {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full flex flex-col items-center text-center">
         <motion.div
-          style={{ y: y1, opacity }}
+          style={{ opacity }}
           className="flex flex-col items-center"
         >
+
+
           <motion.div
             initial={{ opacity: 0, filter: 'blur(10px)', y: 40, scale: 0.95 }}
             animate={{ opacity: 1, filter: 'blur(0px)', y: 0, scale: 1 }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-8 inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border-default bg-bg-elevated/60 backdrop-blur-md shadow-sm"
+            transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col items-center mb-6"
           >
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-success"></span>
-            </span>
-            <RotlessText variant="chat" className="font-medium text-text-primary text-[13px] tracking-wide uppercase">{HERO_DATA.badge}</RotlessText>
+            <div className="mb-4 text-text-tertiary uppercase tracking-[0.2em] md:tracking-[0.3em] text-xs md:text-sm font-bold flex items-center gap-3">
+               <span className="hidden md:block w-8 h-[1px] bg-border-strong"></span>
+               SMKAI Ventures Pvt. Ltd. presents
+               <span className="hidden md:block w-8 h-[1px] bg-border-strong"></span>
+            </div>
+            <div className="text-[4.5rem] md:text-[7.5rem] leading-none tracking-tighter drop-shadow-sm">
+              <JumboText text="AntiRot" />
+            </div>
           </motion.div>
 
           <motion.div
@@ -81,7 +86,7 @@ export const HeroSection = () => {
           >
             <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto group">
               <Button className="px-8 py-4 text-[15px] font-medium w-full shadow-lg shadow-primary-default/20 flex items-center justify-center gap-2 group-hover:scale-[1.02] transition-transform">
-                Join {COMPANY.productName} Beta
+                Connect on Instagram
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
@@ -95,18 +100,19 @@ export const HeroSection = () => {
       </div>
 
       {/* Premium Scroll Indicator */}
-      <motion.div 
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center z-10 text-text-tertiary"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        style={{ opacity }}
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+      <motion.div style={{ opacity }} className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+        <motion.div 
+          className="flex flex-col items-center text-text-tertiary"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
-          <ChevronDown size={32} />
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <ChevronDown size={32} />
+          </motion.div>
         </motion.div>
       </motion.div>
     </section>
