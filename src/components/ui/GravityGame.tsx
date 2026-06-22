@@ -27,14 +27,18 @@ export const GravityGame = () => {
       return;
     }
 
+    // Must be triggered by user interaction
     if (typeof (DeviceOrientationEvent as any).requestPermission === 'function') {
       try {
         const permissionState = await (DeviceOrientationEvent as any).requestPermission();
         if (permissionState === 'granted') {
           startGame();
+        } else {
+          alert('Gyroscope permission denied. The game requires tilt access to play.');
         }
       } catch (error) {
         console.error(error);
+        alert('Make sure you are testing on HTTPS. iOS requires a secure connection for gyro access.');
       }
     } else {
       // Non-iOS 13+ devices
@@ -52,22 +56,21 @@ export const GravityGame = () => {
     gameState.current.vy = 0;
 
     const handleOrientation = (e: DeviceOrientationEvent) => {
-      // beta is front-to-back tilt in degrees, where front is positive
-      // gamma is left-to-right tilt in degrees, where right is positive
-      const maxTilt = 30; // Max tilt angle to consider
+      // beta is front-to-back tilt in degrees
+      // gamma is left-to-right tilt in degrees
+      const maxTilt = 40; 
       
       let beta = e.beta || 0;
       let gamma = e.gamma || 0;
 
-      // Clamp values
       if (beta > maxTilt) beta = maxTilt;
       if (beta < -maxTilt) beta = -maxTilt;
       if (gamma > maxTilt) gamma = maxTilt;
       if (gamma < -maxTilt) gamma = -maxTilt;
 
-      // Apply acceleration (adjusted for portrait mode)
-      gameState.current.vx += gamma * 0.05;
-      gameState.current.vy += beta * 0.05;
+      // Adjust sensitivity 
+      gameState.current.vx += gamma * 0.08;
+      gameState.current.vy += beta * 0.08;
     };
 
     window.addEventListener('deviceorientation', handleOrientation);
@@ -85,18 +88,17 @@ export const GravityGame = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Load mascot image
     const mascotImg = new Image();
     mascotImg.src = mascotImgSrc;
 
     let animationFrameId: number;
-    const radius = 15; // Mascot radius size
+    const radius = 15; 
     const targetRadius = 15;
 
     const render = () => {
       // Apply friction
-      gameState.current.vx *= 0.95;
-      gameState.current.vy *= 0.95;
+      gameState.current.vx *= 0.90;
+      gameState.current.vy *= 0.90;
 
       // Update position
       gameState.current.x += gameState.current.vx;
@@ -126,11 +128,9 @@ export const GravityGame = () => {
       const distance = Math.sqrt(dx * dx + dy * dy);
 
       if (distance < radius + targetRadius) {
-        // Hit!
         gameState.current.score += 1;
         setScore(gameState.current.score);
         
-        // New target
         gameState.current.targetX = Math.random() * (canvas.width - 40) + 20;
         gameState.current.targetY = Math.random() * (canvas.height - 40) + 20;
       }
@@ -138,12 +138,12 @@ export const GravityGame = () => {
       // Draw background
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw "ROT" target text (Pixelated)
+      // Draw "ROT" target text 
       ctx.save();
       ctx.font = 'bold 24px "Courier New", Courier, monospace';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
-      ctx.fillStyle = '#FF3B30'; // Danger red
+      ctx.fillStyle = '#FF3B30'; 
       ctx.shadowBlur = 10;
       ctx.shadowColor = '#FF3B30';
       ctx.fillText('ROT', gameState.current.targetX, gameState.current.targetY);
@@ -159,7 +159,6 @@ export const GravityGame = () => {
           radius * 2
         );
       } else {
-        // Fallback until image loads
         ctx.beginPath();
         ctx.arc(gameState.current.x, gameState.current.y, radius, 0, Math.PI * 2);
         ctx.fillStyle = '#E3C48A';
@@ -178,15 +177,15 @@ export const GravityGame = () => {
   }, [isPlaying]);
 
   return (
-    <div className="w-full max-w-sm mx-auto bg-white/5 rounded-3xl border border-white/10 p-6 backdrop-blur-md shadow-lg">
+    <div className="w-full max-w-sm mx-auto bg-white/50 rounded-3xl border border-border-default p-6 backdrop-blur-md shadow-lg">
       <div className="flex items-center justify-between mb-4">
-        <RotlessText variant="title" className="text-white">AntiRot Gravity</RotlessText>
+        <RotlessText variant="title" className="text-text-primary">AntiRot Gravity</RotlessText>
         <div className="bg-bg-dark px-3 py-1 rounded-full border border-white/10 shadow-sm">
           <RotlessText variant="label" className="text-primary-default">Score: {score}</RotlessText>
         </div>
       </div>
 
-      <div className="relative w-full aspect-square bg-bg-dark/80 rounded-2xl overflow-hidden border-2 border-border-subtle/20 shadow-inner backdrop-blur-xl">
+      <div className="relative w-full aspect-square bg-bg-dark/90 rounded-2xl overflow-hidden border-2 border-border-subtle shadow-inner backdrop-blur-xl">
         {!isMobile && !isPlaying && (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/80 z-10 p-4 text-center">
             <RotlessText variant="chat" className="text-text-secondary mb-4">
@@ -203,7 +202,7 @@ export const GravityGame = () => {
             <RotlessText variant="chat" className="text-white text-center mb-6">
               Tilt your phone to destroy the ROT.
             </RotlessText>
-            <Button onClick={requestAccess} className="px-8 shadow-lg shadow-primary-default/20">Play Now</Button>
+            <Button onClick={requestAccess} className="px-8 shadow-lg shadow-primary-default/20">Enable Gyro</Button>
           </div>
         )}
 
