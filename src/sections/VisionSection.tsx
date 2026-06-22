@@ -4,7 +4,7 @@ import { VISION_DATA, COMPANY } from '@/constants';
 
 export const VisionSection = () => {
   return (
-    <section id="vision" className="py-32 bg-bg-dark text-text-inverse relative overflow-hidden">
+    <section id="vision" className="py-20 bg-bg-dark text-text-inverse relative overflow-hidden">
       <div className="absolute inset-0 bg-primary-default opacity-5" />
       
       <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">

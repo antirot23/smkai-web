@@ -36,9 +36,9 @@ const itemVariants = {
 
 export const FeaturesSection = () => {
   return (
-    <section id="features" className="py-32 bg-bg-primary relative">
+    <section id="features" className="py-20 bg-bg-primary relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <RotlessText variant="label" className="text-primary-default mb-4 uppercase tracking-widest">Chai Tapri</RotlessText>
           <RotlessText variant="boom" className="mb-6">An Indianised community-first discussion ecosystem.</RotlessText>
         </div>

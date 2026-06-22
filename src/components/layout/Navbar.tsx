@@ -37,9 +37,11 @@ export const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
-          <img src={logo} alt="SMKAI Logo" className="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-110" />
-          <RotlessText variant="title" className="hidden sm:block">{COMPANY.name}</RotlessText>
+        <a href="#" className="flex items-center gap-4 group">
+          <div className="w-12 h-12 bg-white rounded-2xl shadow-sm border border-black/5 flex items-center justify-center p-2 transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
+            <img src={logo} alt="SMKAI Logo" className="w-full h-full object-contain" />
+          </div>
+          <RotlessText variant="title" className="hidden sm:block text-text-primary">{COMPANY.name}</RotlessText>
         </a>
 
         {/* Desktop Nav */}

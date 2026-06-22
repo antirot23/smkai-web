@@ -9,6 +9,7 @@ import { FeaturesSection } from '../sections/FeaturesSection';
 import { VisionSection } from '../sections/VisionSection';
 import { TimelineSection } from '../sections/TimelineSection';
 import { FAQSection } from '../sections/FAQSection';
+import { MinigameSection } from '../sections/MinigameSection';
 import { ContactSection } from '../sections/ContactSection';
 
 export const HomePage = () => {
@@ -46,6 +47,7 @@ export const HomePage = () => {
         <VisionSection />
         <TimelineSection />
         <FAQSection />
+        <MinigameSection />
         <ContactSection />
       </main>
       <Footer />

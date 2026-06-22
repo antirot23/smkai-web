@@ -1,4 +1,5 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { RotlessText } from '../components/ui/RotlessText';
 import { Button } from '../components/ui/Button';
 import { PRODUCT_DATA, COMPANY } from '@/constants';
@@ -14,9 +15,17 @@ const SCREENSHOTS = [screen1, screen2, screen3, screen4];
 export const FeaturedProductSection = () => {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % SCREENSHOTS.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <section id="product" className="py-32 bg-bg-dark text-text-inverse relative overflow-hidden">
+    <section id="product" className="py-20 bg-bg-dark text-text-inverse relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM5QzkyQTMiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djI2aDJWMzRoLTJ6bS0yIDBoLTJWMGgydjM0em0tMjIuNDUgMTQuNTRsMS40MTQgMS40MTRMMjUgMzguNTVsLTEuNDE0LTEuNDE0LTEwLjU0NyAxMC41NHptLTItMmwtMS40MTQtMS40MTRMMCAzNy42NzZsMS40MTQgMS40MTQgMTAuNTQ3LTEwLjU0N3ptMjQuOS0yNC45TDI1IDEuMTc2bDEuNDE0LTEuNDE0TDQwLjA4NiA4LjE4NCAzOC42NzIgOS41OThsLTEuNDE1LTEuNDE1em0tMi0ybC0xLjQxNC0xLjQxNEwxNy42NzIgMCAxNi4yNTggMS40MTRsMTAuNTQ3IDEwLjU0NyAxLjQxNC0xLjQxNHoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-20" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
@@ -53,44 +62,35 @@ export const FeaturedProductSection = () => {
             ))}
             
             <div className="mt-4">
-              <a href="https://instagram.com/antirot" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/joinantirot/" target="_blank" rel="noopener noreferrer">
                 <Button className="w-full sm:w-auto px-8">Get {COMPANY.productName}</Button>
               </a>
             </div>
           </motion.div>
 
           <motion.div 
-            className="lg:col-span-7 relative w-full pt-10 lg:pt-0"
+            className="lg:col-span-7 relative w-full pt-10 lg:pt-0 flex items-center justify-center"
             style={{ y }}
           >
-            {/* Horizontal Scrolling Gallery */}
-            <div className="relative w-full overflow-hidden rounded-[40px] p-4 lg:p-8 bg-white/5 border border-white/10 backdrop-blur-xl">
-              <div className="flex overflow-x-auto gap-6 snap-x snap-mandatory pb-8 pt-4 px-4 scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-                <style>{`
-                  .scrollbar-hide::-webkit-scrollbar {
-                      display: none;
-                  }
-                `}</style>
-                {SCREENSHOTS.map((src, i) => (
-                  <motion.div 
-                    key={i} 
-                    className="min-w-[280px] sm:min-w-[320px] max-w-[320px] aspect-[9/19] rounded-[30px] overflow-hidden snap-center shrink-0 border-[6px] border-[#2A2A2A] shadow-2xl relative"
-                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.5, delay: 0.3 + (i * 0.1) }}
-                    whileHover={{ y: -10 }}
-                  >
-                    {/* Dynamic Island Placeholder */}
-                    <div className="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-6 bg-black rounded-full z-20"></div>
-                    
-                    <img src={src} alt={`App Screenshot ${i + 1}`} className="w-full h-full object-cover" />
-                  </motion.div>
-                ))}
-              </div>
+            {/* Auto-scrolling Static Phone Mockup */}
+            <div className="relative w-[280px] sm:w-[320px] aspect-[9/19] bg-bg-primary rounded-[40px] border-[10px] border-[#2A2A2A] shadow-2xl overflow-hidden flex flex-col z-20">
+              {/* Dynamic Island */}
+              <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-7 bg-black rounded-full z-30 shadow-[0_0_10px_rgba(0,0,0,0.5)]"></div>
               
-              <div className="absolute bottom-4 left-0 w-full flex justify-center gap-2 pointer-events-none">
-                <RotlessText variant="tiny" className="text-text-tertiary uppercase tracking-widest bg-bg-dark/80 px-4 py-1 rounded-full backdrop-blur-md">Swipe to explore</RotlessText>
+              {/* Slideshow Container */}
+              <div className="relative w-full h-full bg-black overflow-hidden">
+                <AnimatePresence initial={false}>
+                  <motion.img
+                    key={currentIndex}
+                    src={SCREENSHOTS[currentIndex]}
+                    alt={`App Screenshot ${currentIndex + 1}`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    initial={{ opacity: 0, scale: 1.05 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                  />
+                </AnimatePresence>
               </div>
             </div>
             
