@@ -7,7 +7,6 @@ export const GravityGame = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [score, setScore] = useState(0);
-  const [permissionGranted, setPermissionGranted] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
 
   // Game state refs to avoid dependency loops in requestAnimationFrame
@@ -32,7 +31,6 @@ export const GravityGame = () => {
       try {
         const permissionState = await (DeviceOrientationEvent as any).requestPermission();
         if (permissionState === 'granted') {
-          setPermissionGranted(true);
           startGame();
         }
       } catch (error) {
@@ -40,7 +38,6 @@ export const GravityGame = () => {
       }
     } else {
       // Non-iOS 13+ devices
-      setPermissionGranted(true);
       startGame();
     }
   };
