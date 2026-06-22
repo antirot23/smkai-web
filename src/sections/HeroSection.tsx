@@ -12,7 +12,7 @@ export const HeroSection = () => {
   const opacity = useTransform(scrollY, [0, 600], [1, 0]);
 
   return (
-    <section className="relative min-h-[90svh] flex items-center justify-center overflow-hidden bg-bg-primary pt-24 md:pt-32 pb-12">
+    <section className="relative min-h-[90svh] flex items-center justify-center overflow-hidden bg-bg-primary pt-24 md:pt-32 pb-24 md:pb-16">
       {/* Premium Aurora Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div 
@@ -100,7 +100,7 @@ export const HeroSection = () => {
       </div>
 
       {/* Premium Scroll Indicator */}
-      <motion.div style={{ opacity }} className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+      <motion.div style={{ opacity }} className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
         <motion.div 
           className="flex flex-col items-center text-text-tertiary"
           initial={{ opacity: 0, y: -20 }}

@@ -1,6 +1,7 @@
 import { RotlessText } from '../ui/RotlessText';
 import { COMPANY } from '@/constants';
 import logo from '@/assets/logo.png';
+import { Link } from 'react-router-dom';
 
 const INSTAGRAM_URL = "https://www.instagram.com/k_shastri03/";
 
@@ -44,15 +45,15 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li><a href="#built-by" className="text-text-tertiary hover:text-primary-default transition-colors text-[15px]">About Us</a></li>
               <li><a href="#roadmap" className="text-text-tertiary hover:text-primary-default transition-colors text-[15px]">Roadmap</a></li>
-              <li><a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-text-tertiary hover:text-primary-default transition-colors text-[15px]">Join Beta</a></li>
             </ul>
           </div>
 
           <div className="col-span-1 md:col-span-2 lg:col-span-3">
             <RotlessText variant="label" className="text-white/40 mb-6 uppercase tracking-widest text-xs font-bold">Legal</RotlessText>
             <ul className="space-y-4">
-              <li><a href="#" className="text-text-tertiary hover:text-white transition-colors text-[15px]">Privacy Policy</a></li>
-              <li><a href="#" className="text-text-tertiary hover:text-white transition-colors text-[15px]">Terms of Service</a></li>
+              <li><Link to="/guidelines" className="text-text-tertiary hover:text-white transition-colors text-[15px]">Community Guidelines</Link></li>
+              <li><Link to="/privacy" className="text-text-tertiary hover:text-white transition-colors text-[15px]">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="text-text-tertiary hover:text-white transition-colors text-[15px]">Terms of Service</Link></li>
             </ul>
             <div className="mt-8">
               <span className="text-xs text-white/30 tracking-widest uppercase mb-2 block">Incorporated</span>

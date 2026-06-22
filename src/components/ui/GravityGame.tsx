@@ -178,15 +178,30 @@ export const GravityGame = () => {
         // Bouncing logic
         if (gameState.current.y > canvas.height - radius) {
           gameState.current.y = canvas.height - radius;
+          if (Math.abs(gameState.current.vy) > 2) {
+            const wallSnd = new Audio('/sounds/WallHit.wav');
+            wallSnd.volume = 0.3;
+            wallSnd.play().catch(e => {});
+          }
           gameState.current.vy *= -0.6; // Bounce 
           gameState.current.vx *= 0.85; // Ground friction
         }
         if (gameState.current.x > canvas.width - radius) {
           gameState.current.x = canvas.width - radius;
+          if (Math.abs(gameState.current.vx) > 2) {
+            const wallSnd = new Audio('/sounds/WallHit.wav');
+            wallSnd.volume = 0.3;
+            wallSnd.play().catch(e => {});
+          }
           gameState.current.vx *= -0.7; // Wall bounce
         }
         if (gameState.current.x < radius) {
           gameState.current.x = radius;
+          if (Math.abs(gameState.current.vx) > 2) {
+            const wallSnd = new Audio('/sounds/WallHit.wav');
+            wallSnd.volume = 0.3;
+            wallSnd.play().catch(e => {});
+          }
           gameState.current.vx *= -0.7;
         }
       }
@@ -206,6 +221,10 @@ export const GravityGame = () => {
         if (distance < radius + targetRadius) {
           gameState.current.score += 1;
           setScore(gameState.current.score);
+          
+          const boomSound = new Audio('/sounds/Boom1.wav');
+          boomSound.volume = 0.5;
+          boomSound.play().catch(err => console.log('Audio playback blocked:', err));
           
           gameState.current.state = 'shattering';
           gameState.current.targetAlpha = 0; // Hide the main target
