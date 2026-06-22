@@ -15,8 +15,8 @@ const navLinks = [
 
 const INSTAGRAM_URL = "https://www.instagram.com/k_shastri03/";
 
-const easeOutCubic = [0.33, 1, 0.68, 1];
-const easeInOutCubic = [0.65, 0, 0.35, 1];
+const easeOutCubic: [number, number, number, number] = [0.33, 1, 0.68, 1];
+const easeInOutCubic: [number, number, number, number] = [0.65, 0, 0.35, 1];
 
 const backdropVariants = {
   hidden: { opacity: 0, transition: { duration: 0.3, ease: easeInOutCubic } },

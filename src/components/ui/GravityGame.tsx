@@ -181,7 +181,7 @@ export const GravityGame = () => {
           if (Math.abs(gameState.current.vy) > 2) {
             const wallSnd = new Audio('/sounds/WallHit.wav');
             wallSnd.volume = 0.3;
-            wallSnd.play().catch(e => {});
+            wallSnd.play().catch(() => {});
           }
           gameState.current.vy *= -0.6; // Bounce 
           gameState.current.vx *= 0.85; // Ground friction
@@ -191,7 +191,7 @@ export const GravityGame = () => {
           if (Math.abs(gameState.current.vx) > 2) {
             const wallSnd = new Audio('/sounds/WallHit.wav');
             wallSnd.volume = 0.3;
-            wallSnd.play().catch(e => {});
+            wallSnd.play().catch(() => {});
           }
           gameState.current.vx *= -0.7; // Wall bounce
         }
@@ -200,7 +200,7 @@ export const GravityGame = () => {
           if (Math.abs(gameState.current.vx) > 2) {
             const wallSnd = new Audio('/sounds/WallHit.wav');
             wallSnd.volume = 0.3;
-            wallSnd.play().catch(e => {});
+            wallSnd.play().catch(() => {});
           }
           gameState.current.vx *= -0.7;
         }

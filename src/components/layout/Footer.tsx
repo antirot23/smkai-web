@@ -3,7 +3,7 @@ import { COMPANY } from '@/constants';
 import logo from '@/assets/logo.png';
 import { Link } from 'react-router-dom';
 
-const INSTAGRAM_URL = "https://www.instagram.com/k_shastri03/";
+
 
 export const Footer = () => {
   return (
