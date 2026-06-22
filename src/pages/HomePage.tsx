@@ -8,6 +8,7 @@ import { FeaturedProductSection } from '../sections/FeaturedProductSection';
 import { FeaturesSection } from '../sections/FeaturesSection';
 import { VisionSection } from '../sections/VisionSection';
 import { TimelineSection } from '../sections/TimelineSection';
+import { FoundingTeamSection } from '../sections/FoundingTeamSection';
 import { FAQSection } from '../sections/FAQSection';
 import { MinigameSection } from '../sections/MinigameSection';
 import { ContactSection } from '../sections/ContactSection';
@@ -46,6 +47,7 @@ export const HomePage = () => {
         <FeaturesSection />
         <VisionSection />
         <TimelineSection />
+        <FoundingTeamSection />
         <FAQSection />
         <MinigameSection />
         <ContactSection />

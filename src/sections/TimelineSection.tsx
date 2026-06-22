@@ -4,7 +4,7 @@ import { TIMELINE_DATA } from '@/constants';
 
 export const TimelineSection = () => {
   return (
-    <section id="timeline" className="py-32 bg-bg-secondary relative">
+    <section id="timeline" className="py-12 bg-bg-secondary relative">
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-24">
           <RotlessText variant="label" className="text-primary-default mb-4 uppercase tracking-widest">Our Journey</RotlessText>

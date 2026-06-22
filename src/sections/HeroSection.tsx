@@ -71,10 +71,10 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col sm:flex-row gap-4 relative z-20"
+            className="flex flex-wrap items-center justify-center gap-4"
           >
-            <a href="https://www.instagram.com/joinantirot/" target="_blank" rel="noopener noreferrer">
-              <Button className="px-8 py-4 text-base w-full sm:w-auto">Join {COMPANY.productName} on Instagram</Button>
+            <a href="https://www.instagram.com/k_shastri03/" target="_blank" rel="noopener noreferrer">
+              <Button className="px-8 py-4 text-base w-full sm:w-auto shadow-lg shadow-primary-default/20">Join {COMPANY.productName} on Instagram</Button>
             </a>
             <a href="#vision" className="w-full sm:w-auto">
               <Button variant="outline" className="px-8 py-4 text-base bg-bg-elevated/50 backdrop-blur-sm w-full">Read Our Vision</Button>

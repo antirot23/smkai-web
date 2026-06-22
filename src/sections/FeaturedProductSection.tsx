@@ -25,7 +25,7 @@ export const FeaturedProductSection = () => {
   }, []);
 
   return (
-    <section id="product" className="py-20 bg-bg-dark text-text-inverse relative overflow-hidden">
+    <section id="product" className="py-12 bg-bg-dark text-text-inverse relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM5QzkyQTMiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djI2aDJWMzRoLTJ6bS0yIDBoLTJWMGgydjM0em0tMjIuNDUgMTQuNTRsMS40MTQgMS40MTRMMjUgMzguNTVsLTEuNDE0LTEuNDE0LTEwLjU0NyAxMC41NHptLTItMmwtMS40MTQtMS40MTRMMCAzNy42NzZsMS40MTQgMS40MTQgMTAuNTQ3LTEwLjU0N3ptMjQuOS0yNC45TDI1IDEuMTc2bDEuNDE0LTEuNDE0TDQwLjA4NiA4LjE4NCAzOC42NzIgOS41OThsLTEuNDE1LTEuNDE1em0tMi0ybC0xLjQxNC0xLjQxNEwxNy42NzIgMCAxNi4yNTggMS40MTRsMTAuNTQ3IDEwLjU0NyAxLjQxNC0xLjQxNHoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-20" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
@@ -62,7 +62,7 @@ export const FeaturedProductSection = () => {
             ))}
             
             <div className="mt-4">
-              <a href="https://www.instagram.com/joinantirot/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/k_shastri03/" target="_blank" rel="noopener noreferrer">
                 <Button className="w-full sm:w-auto px-8">Get {COMPANY.productName}</Button>
               </a>
             </div>

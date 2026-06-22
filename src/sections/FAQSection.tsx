@@ -7,7 +7,7 @@ export const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-32 bg-bg-primary">
+    <section id="faq" className="py-12 bg-bg-primary">
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
           <RotlessText variant="label" className="text-primary-default mb-4 uppercase tracking-widest">FAQ</RotlessText>

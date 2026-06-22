@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import { RotlessText } from '../components/ui/RotlessText';
 import { MISSION_DATA } from '@/constants';
-import poster from '@/assets/mission-poster.png';
+import appLogo from '@/assets/antirot-app-logo.png';
 
 export const MissionSection = () => {
   return (
-    <section id="mission" className="py-20 bg-bg-primary relative">
+    <section id="mission" className="py-12 bg-bg-primary relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -44,9 +44,14 @@ export const MissionSection = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="relative h-[500px] lg:h-[600px] w-full rounded-3xl overflow-hidden shadow-2xl"
+            className="relative h-[500px] lg:h-[600px] w-full rounded-3xl overflow-hidden shadow-2xl bg-bg-secondary border border-border-subtle flex flex-col items-center justify-center p-8 lg:p-12"
           >
-            <img src={poster} alt="AntiRot App Experience" className="w-full h-full object-cover" />
+            <div className="flex-1 w-full flex items-center justify-center relative">
+              <img src={appLogo} alt="AntiRot App Logo" className="w-[80%] max-w-[400px] h-auto object-contain rounded-[40px] drop-shadow-2xl" />
+            </div>
+            <div className="mt-4 mb-2">
+              <span className="text-base md:text-lg uppercase tracking-[0.2em] text-primary-default font-bold">Talk Nerdy To Me.</span>
+            </div>
           </motion.div>
         </div>
       </div>
