@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Figtree', sans-serif;
+  --font-accent: 'Sacramento', cursive;
+  --font-gelica: 'Gelica', serif; /* fallback */
+
+  /* Colors based on React Native app tokens */
+  --color-primary-default: #A16207;
+  --color-primary-hover: #7D4C05;
+  --color-primary-light: #FEF3C7;
+  --color-primary-dark: #451A03;
+
+  --color-bg-primary: #FAF6F1;
+  --color-bg-secondary: #F5F6F7;
+  --color-bg-tertiary: #EEEFF2;
+  --color-bg-subtle: #F7F7F7;
+  --color-bg-elevated: #FFFFFF;
+  --color-bg-dark: #1A1A1A;
+
+  --color-text-primary: #0F1D40;
+  --color-text-secondary: #49536E;
+  --color-text-tertiary: #747C90;
+  --color-text-inverse: #FFFFFF;
+  --color-text-dark: #000000;
+
+  --color-border-default: #E2E4E8;
+  --color-border-subtle: #EFEFEF;
+  --color-border-focus: #A16207;
+  --color-border-error: #FF3236;
+
+  /* Semantic */
+  --color-success: #22C55E;
+  --color-warning: #EAB308;
+  --color-error: #EF4444;
+  --color-info: #3B82F6;
+
+  /* Border Radii based on RN app */
+  --radius-xxs: 2px;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-ssm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-3xl: 32px;
+  --radius-circle: 9999px;
+}
+
+@layer base {
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  
+  .lenis.lenis-smooth [data-scroll-container] {
+    will-change: transform;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
+  body {
+    @apply bg-bg-primary text-text-primary font-sans antialiased selection:bg-primary-default selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-text-primary;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
