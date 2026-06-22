@@ -12,7 +12,7 @@ export const HeroSection = () => {
   const opacity = useTransform(scrollY, [0, 600], [1, 0]);
 
   return (
-    <section className="relative min-h-[90svh] flex items-center justify-center overflow-hidden bg-bg-primary pt-16 pb-12">
+    <section className="relative min-h-[90svh] flex items-center justify-center overflow-hidden bg-bg-primary pt-24 md:pt-32 pb-12">
       {/* Premium Aurora Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div 

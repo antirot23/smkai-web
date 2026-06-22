@@ -3,7 +3,7 @@ import mascotImgSrc from '@/assets/mascot.png';
 
 export const JumboText = ({ text }: { text: string }) => {
   return (
-    <span className="inline-flex items-center">
+    <span className="inline-flex items-center gap-[2px] md:gap-1">
       {text.split('').map((char, index) => {
         const isMascot = char.toLowerCase() === 'o';
         
