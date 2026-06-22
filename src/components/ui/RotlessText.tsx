@@ -30,6 +30,37 @@ const variantStyles: Record<RotlessTextVariant, string> = {
   accent: 'font-accent text-[48px] md:text-[64px] leading-[1] text-primary-default',
 };
 
+const highlightAntirot = (text: string) => {
+  const parts = text.split(/(Antirot)/gi);
+  return parts.map((part, i) => 
+    part.toLowerCase() === 'antirot' ? (
+      <span key={i} className="text-primary-default font-bold text-[1.1em] tracking-tight inline-block">{part}</span>
+    ) : part
+  );
+};
+
+const processChildren = (children: React.ReactNode): React.ReactNode => {
+  if (typeof children === 'string') {
+    return highlightAntirot(children);
+  }
+  if (Array.isArray(children)) {
+    return children.map((child, i) => (
+      <React.Fragment key={i}>{processChildren(child)}</React.Fragment>
+    ));
+  }
+  if (React.isValidElement(children)) {
+    // Avoid recursively processing certain elements if needed, but usually safe
+    const props = children.props as any;
+    if (props && props.children) {
+      return React.cloneElement(children, {
+        ...props,
+        children: processChildren(props.children)
+      });
+    }
+  }
+  return children;
+};
+
 export const RotlessText = React.forwardRef<HTMLElement, RotlessTextProps>(
   ({ variant = 'normal', as: Component = 'p', className, children, ...props }, ref) => {
     return (
@@ -39,7 +70,7 @@ export const RotlessText = React.forwardRef<HTMLElement, RotlessTextProps>(
         className={cn(variantStyles[variant], className)}
         {...props}
       >
-        {children}
+        {processChildren(children)}
       </Component>
     );
   }

@@ -2,33 +2,36 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { RotlessText } from '../components/ui/RotlessText';
 import { Button } from '../components/ui/Button';
 import { HERO_DATA, COMPANY } from '@/constants';
+import { ArrowRight, ChevronDown } from 'lucide-react';
+
+const INSTAGRAM_URL = "https://www.instagram.com/k_shastri03/";
 
 export const HeroSection = () => {
   const { scrollY } = useScroll();
-  const y1 = useTransform(scrollY, [0, 1000], [0, 200]);
-  const opacity = useTransform(scrollY, [0, 500], [1, 0]);
+  const y1 = useTransform(scrollY, [0, 1000], [0, 250]);
+  const opacity = useTransform(scrollY, [0, 600], [1, 0]);
 
   return (
-    <section className="relative min-h-[90svh] flex items-center justify-center overflow-hidden bg-bg-primary pt-16">
+    <section className="relative min-h-[90svh] flex items-center justify-center overflow-hidden bg-bg-primary pt-16 pb-12">
       {/* Premium Aurora Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div 
-          className="absolute top-[10%] left-[20%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] rounded-full blur-[100px] md:blur-[140px] opacity-50 mix-blend-multiply"
+          className="absolute top-[5%] left-[15%] w-[45vw] h-[45vw] max-w-[600px] max-h-[600px] rounded-full blur-[100px] md:blur-[130px] opacity-40 mix-blend-multiply"
           style={{ backgroundColor: '#E3C48A' }}
-          animate={{ x: [-30, 30], y: [-20, 20], scale: [1, 1.08] }}
-          transition={{ duration: 18, repeat: Infinity, repeatType: 'mirror', ease: "easeInOut" }}
+          animate={{ x: [-20, 20], y: [-15, 15], scale: [1, 1.05] }}
+          transition={{ duration: 20, repeat: Infinity, repeatType: 'mirror', ease: "easeInOut" }}
         />
         <motion.div 
-          className="absolute top-[40%] right-[10%] w-[45vw] h-[45vw] max-w-[500px] max-h-[500px] rounded-full blur-[100px] md:blur-[140px] opacity-40 mix-blend-multiply"
+          className="absolute top-[30%] right-[10%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] rounded-full blur-[100px] md:blur-[130px] opacity-30 mix-blend-multiply"
           style={{ backgroundColor: '#C89B63' }}
-          animate={{ x: [30, -30], y: [20, -20], scale: [1.08, 1] }}
-          transition={{ duration: 22, repeat: Infinity, repeatType: 'mirror', ease: "easeInOut", delay: 2 }}
+          animate={{ x: [20, -20], y: [15, -15], scale: [1.05, 1] }}
+          transition={{ duration: 25, repeat: Infinity, repeatType: 'mirror', ease: "easeInOut", delay: 2 }}
         />
         <motion.div 
-          className="absolute -bottom-[10%] left-[30%] w-[60vw] h-[60vw] max-w-[700px] max-h-[700px] rounded-full blur-[100px] md:blur-[140px] opacity-50 mix-blend-multiply"
+          className="absolute -bottom-[5%] left-[25%] w-[55vw] h-[55vw] max-w-[700px] max-h-[700px] rounded-full blur-[100px] md:blur-[130px] opacity-40 mix-blend-multiply"
           style={{ backgroundColor: '#F3E2BE' }}
-          animate={{ x: [-20, 20], y: [30, -30], scale: [1, 1.05] }}
-          transition={{ duration: 25, repeat: Infinity, repeatType: 'mirror', ease: "easeInOut", delay: 1 }}
+          animate={{ x: [-15, 15], y: [20, -20], scale: [1, 1.03] }}
+          transition={{ duration: 22, repeat: Infinity, repeatType: 'mirror', ease: "easeInOut", delay: 1 }}
         />
       </div>
 
@@ -38,75 +41,72 @@ export const HeroSection = () => {
           className="flex flex-col items-center"
         >
           <motion.div
-            initial={{ opacity: 0, filter: 'blur(10px)', y: 50, scale: 0.95 }}
+            initial={{ opacity: 0, filter: 'blur(10px)', y: 40, scale: 0.95 }}
             animate={{ opacity: 1, filter: 'blur(0px)', y: 0, scale: 1 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border-default bg-bg-elevated/50 backdrop-blur-sm"
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="mb-8 inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-border-default bg-bg-elevated/60 backdrop-blur-md shadow-sm"
           >
-            <span className="w-2 h-2 rounded-full bg-success"></span>
-            <RotlessText variant="chat" className="font-medium text-text-primary">{HERO_DATA.badge}</RotlessText>
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-success"></span>
+            </span>
+            <RotlessText variant="chat" className="font-medium text-text-primary text-[13px] tracking-wide uppercase">{HERO_DATA.badge}</RotlessText>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, filter: 'blur(15px)', y: 60, scale: 0.9 }}
+            initial={{ opacity: 0, filter: 'blur(12px)', y: 50, scale: 0.98 }}
             animate={{ opacity: 1, filter: 'blur(0px)', y: 0, scale: 1 }}
-            transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.4, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           >
-            <RotlessText variant="scream" className="max-w-4xl mx-auto mb-6">
-              The future belongs to those who <span className="font-accent text-primary-default font-normal px-2">think</span> the most.
+            <RotlessText variant="scream" className="max-w-[4.5rem] md:max-w-4xl mx-auto mb-6 text-[3.5rem] md:text-[5rem] leading-[1.1] md:leading-[1.05] tracking-tight text-text-primary">
+              The social platform that rewards <span className="font-accent text-primary-default font-normal px-2 italic">thinking</span>, not scrolling.
             </RotlessText>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, filter: 'blur(10px)', y: 40 }}
+            initial={{ opacity: 0, filter: 'blur(10px)', y: 30 }}
             animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           >
-            <RotlessText variant="loud3" className="max-w-2xl mx-auto text-text-secondary mb-10 font-normal">
+            <RotlessText variant="loud3" className="max-w-2xl mx-auto text-text-secondary mb-12 font-normal text-[1.1rem] md:text-[1.25rem] leading-relaxed">
               {HERO_DATA.subheadline}
             </RotlessText>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-wrap items-center justify-center gap-4"
+            transition={{ duration: 1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full"
           >
-            <a href="https://www.instagram.com/k_shastri03/" target="_blank" rel="noopener noreferrer">
-              <Button className="px-8 py-4 text-base w-full sm:w-auto shadow-lg shadow-primary-default/20">Join {COMPANY.productName} on Instagram</Button>
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto group">
+              <Button className="px-8 py-4 text-[15px] font-medium w-full shadow-lg shadow-primary-default/20 flex items-center justify-center gap-2 group-hover:scale-[1.02] transition-transform">
+                Join {COMPANY.productName} Beta
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </Button>
             </a>
-            <a href="#vision" className="w-full sm:w-auto">
-              <Button variant="outline" className="px-8 py-4 text-base bg-bg-elevated/50 backdrop-blur-sm w-full">Read Our Vision</Button>
+            <a href="#product" className="w-full sm:w-auto">
+              <Button variant="outline" className="px-8 py-4 text-[15px] font-medium bg-bg-elevated/40 backdrop-blur-md w-full border-border-default hover:bg-bg-elevated hover:border-text-primary transition-all">
+                See How It Works
+              </Button>
             </a>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Scroll indicator - hidden on very short mobile screens to prevent overlap */}
+      {/* Premium Scroll Indicator */}
       <motion.div 
-        className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 z-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center z-10 text-text-tertiary"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.2, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+        style={{ opacity }}
       >
-        <RotlessText variant="tiny" className="uppercase tracking-widest text-text-tertiary">Scroll</RotlessText>
-        <motion.div 
-          className="w-[1px] h-12 bg-border-default relative overflow-hidden"
-        >
-          <motion.div 
-            className="absolute top-0 left-0 w-full h-1/2 bg-primary-default"
-            animate={{ top: ['-50%', '100%'] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
-          />
-        </motion.div>
         <motion.div
-          animate={{ y: [0, 5, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         >
-          <svg className="w-4 h-4 text-primary-default" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
+          <ChevronDown size={32} />
         </motion.div>
       </motion.div>
     </section>

@@ -8,7 +8,7 @@ export const ContactSection = () => {
   const [copiedPhone, setCopiedPhone] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('hello@smkaiventures.com');
+    navigator.clipboard.writeText('Antirot12@gmail.com');
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   };
@@ -40,7 +40,7 @@ export const ContactSection = () => {
                     <svg className="w-5 h-5 text-text-tertiary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <RotlessText variant="label" className="text-text-primary whitespace-nowrap">hello@smkaiventures.com</RotlessText>
+                    <RotlessText variant="label" className="text-text-primary whitespace-nowrap">Antirot12@gmail.com</RotlessText>
                   </div>
                   <Button variant="ghost" onClick={handleCopyEmail} className="px-4 py-2 text-sm bg-bg-secondary hover:bg-border-subtle ml-2 shrink-0">
                     {copiedEmail ? 'Copied!' : 'Copy'}

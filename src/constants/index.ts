@@ -1,118 +1,122 @@
 export const COMPANY = {
-  name: 'SMKAI Ventures Private Limited',
-  productName: 'AntiRot',
-  tagline: 'Talk nerdy to me',
+  name: 'SMKAI Ventures',
+  legalName: 'SMKAI Ventures Private Limited',
+  productName: 'Antirot',
   vision: 'Replacing endless scrolling with meaningful thinking.',
   incorporated: 'May 19, 2026',
 };
 
 export const HERO_DATA = {
-  badge: "India's First Daily Thinking Ecosystem",
-  headline: "The future belongs to those who think the most.",
-  subheadline: "AntiRot transforms daily news, ideas, and opinions into meaningful discussions, video responses, and collaborative storytelling. Not your ordinary social media—not your ordinary education app.",
+  badge: "Antirot Private Beta",
+  headline: "A social ecosystem that rewards thinking, not scrolling.",
+  subheadline: "We built Antirot to transform daily news and ideas into meaningful discussions, video responses, and collaborative storytelling. No algorithms optimizing for outrage. Just genuine human curiosity.",
 };
 
 export const MISSION_DATA = {
-  title: "The Problem We Solve",
-  headline: "What if social media rewarded thinking instead of scrolling?",
-  description: "Modern social media has unintentionally created three major problems: Information Overload, Passive Consumption, and Brain Rot Culture. Algorithms reward outrage and low-effort content, causing critical thinking and meaningful discussion to decline.",
+  title: "The Problem",
+  headline: "What if your attention wasn't the product?",
+  description: "We started building Antirot because we were exhausted. Modern social media has unintentionally created an ecosystem of passive consumption and brain rot. Algorithms reward low-effort outrage, causing our ability to engage in critical thinking to decline.",
   points: [
     {
       title: "Active Participation",
-      description: "Users don't upload random content. Every interaction begins with an idea, transforming consumption into participation."
+      description: "You don't just consume content. Every interaction begins with an idea, transforming your daily scroll into active participation."
     },
     {
       title: "Reputation Driven",
-      description: "Unlike platforms that reward virality, AntiRot rewards curiosity, participation, and reputation."
+      description: "Unlike platforms that reward virality at all costs, Antirot rewards curiosity, consistency, and genuine reputation."
     }
   ]
 };
 
 export const PRODUCT_DATA = {
-  title: "AntiRot",
-  subtitle: "A social thinking ecosystem where every interaction begins with an idea.",
+  title: "How Antirot solves it",
+  subtitle: "Every interaction on the platform begins with a thought-provoking idea.",
   features: [
     {
       title: "Daily Friction",
-      description: "The intellectual heartbeat of AntiRot. Every day a major question is published based on current affairs to spark thought."
+      description: "The intellectual heartbeat of Antirot. Every day, a single major question based on current affairs is published to spark thought and debate."
     },
     {
       title: "SIP (Short Intelligent Perspectives)",
-      description: "Users upload short video opinions linked directly to a Daily Friction question, creating a searchable archive of public thinking."
+      description: "Upload short video opinions linked directly to a Daily Friction. We're creating a searchable, public archive of human thinking."
     },
     {
       title: "ARO - AI Companion",
-      description: "Your discussion guide, moderator, debate facilitator, and safety monitor to ensure productive digital communities."
+      description: "Your personal discussion guide, moderator, and safety monitor built to ensure productive and safe digital communities."
     }
   ],
   stats: {
     title: "10,800+",
-    subtitle: "Instagram followers"
+    subtitle: "Early supporters ready"
   }
 };
 
 export const CHAI_TAPRI_FEATURES = [
   {
     title: "1:1 Chat Buddy",
-    description: "Interest-based, 20min one-to-one conversations globally."
+    description: "Interest-based, 20-minute one-to-one conversations with people globally."
   },
   {
     title: "Current Affairs Adda",
-    description: "24-hour structured headline discussions that archive later."
+    description: "24-hour structured headline discussions that archive natively."
   },
   {
     title: "Anonymous Debate",
-    description: "Real-time team debates with public voting and badges validation."
+    description: "Real-time team debates with public voting and validation badges."
   },
   {
-    title: "Pass The Cup & Brew",
-    description: "Collaborative storytelling and team-based puzzles."
+    title: "Pass The Cup",
+    description: "Collaborative storytelling and team-based mental puzzles."
   }
 ];
 
 export const VISION_DATA = {
-  quote: "We aim to build a platform where thinking becomes a habit again. A platform where curiosity is rewarded and conversations matter.",
-  footer: "Because humanity did not evolve through scrolling. It evolved through questions."
+  quote: "We aim to build a platform where thinking becomes a habit again. A place where curiosity is rewarded and your conversations actually matter.",
+  footer: "Humanity didn't evolve through scrolling. It evolved through questions."
 };
 
-export const TIMELINE_DATA = [
-  {
-    year: "May 2026",
-    title: "Incorporation",
-    description: "SMKAI Ventures Private Limited is incorporated with a vision to build digital products that encourage thoughtful human interaction."
-  },
-  {
-    year: "Validation",
-    title: "Community & Design",
-    description: "10,800+ Instagram followers, 500+ beta users ready. Complete product concept designed, UI prototypes developed."
-  },
-  {
-    year: "Present",
-    title: "Development Complete",
-    description: "The application is fully prepared and ready to be launched. Legal documents and architecture are finalized."
-  },
-  {
-    year: "Future",
-    title: "Go-To-Market",
-    description: "Focusing on user acquisition, creator partnerships, and scaling the technology infrastructure."
-  }
+export const FOUNDER_NOTE = {
+  title: "Why We Started Antirot",
+  content: "We noticed that our generation was spending hours every day consuming content, but feeling more disconnected and intellectually drained than ever. We wanted a place to debate, learn, and grow without the toxicity of engagement-bait algorithms. So we decided to build it ourselves."
+};
+
+export const CURRENT_BUILDING = [
+  { label: "MVP Complete", status: "done" },
+  { label: "Internal Testing", status: "done" },
+  { label: "Closed Beta", status: "done" },
+  { label: "Opening Beta Soon", status: "active" }
+];
+
+export const RECENT_PROGRESS = [
+  "Redesigned discussion flow for clarity",
+  "Implemented smarter notification delivery",
+  "Optimized bundle size for 2x faster loading",
+  "Improved user onboarding experience"
+];
+
+export const ROADMAP_DATA = [
+  { phase: "Today", description: "Internal testing & optimization" },
+  { phase: "Private Beta", description: "Inviting top waitlist users" },
+  { phase: "Public Beta", description: "Opening doors globally" },
+  { phase: "Launch", description: "Version 1.0 Release" },
+  { phase: "Future Products", description: "Expanding the SMKAI ecosystem" }
 ];
 
 export const FAQ_DATA = [
   {
-    question: "What makes AntiRot different from traditional social media?",
-    answer: "Instead of endless feeds and passive scrolling, AntiRot offers daily thinking questions and structured opinion responses. We are building a Thinker Economy rather than a Creator Economy."
+    question: "What makes Antirot different from traditional social media?",
+    answer: "Instead of endless feeds designed to keep you scrolling, Antirot offers daily thinking questions and structured responses. We're building a platform focused on ideas, not just influencers."
   },
   {
     question: "What is Chai Tapri?",
-    answer: "It's our Indianised community-first discussion ecosystem. It features stalls like 1:1 Chat Buddy, Current Affairs Adda, Anonymous Debate, and collaborative games like Pass the Cup."
+    answer: "It's our community-first discussion ecosystem inspired by Indian culture. It features spaces like 1:1 Chat Buddy, Current Affairs Adda, and collaborative games."
   },
   {
-    question: "What is the business model?",
-    answer: "We monetize through Premium Subscriptions (unlocking extra debate rooms and archives), Sponsorship Advertising (Daily Friction sponsors), Creator Monetisation via Support Payments (60/40 split), and Digital Badges."
+    question: "How do you plan to monetize?",
+    answer: "Through premium subscriptions for expanded debate access, responsible sponsorship for Daily Frictions, and creator monetization via a 60/40 support split."
   },
   {
-    question: "Who are the founders?",
-    answer: "Founded by Kaustubhi Shastri (Chairperson & Director) and Anshul Maheshwari (CEO & Director)."
+    question: "Who is the team behind this?",
+    answer: "Antirot is built by SMKAI Ventures Private Limited, founded by Kaustubhi Shastri and Anshul Maheshwari."
   }
 ];

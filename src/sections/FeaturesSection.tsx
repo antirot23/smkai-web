@@ -21,30 +21,35 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.1 }
+    transition: { staggerChildren: 0.15, delayChildren: 0.1 }
   }
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as any }
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
   }
 };
 
 export const FeaturesSection = () => {
   return (
-    <section id="features" className="py-12 bg-bg-primary relative">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <RotlessText variant="label" className="text-primary-default mb-4 uppercase tracking-widest">Chai Tapri</RotlessText>
-          <RotlessText variant="boom" className="mb-6">An Indianised community-first discussion ecosystem.</RotlessText>
+    <section id="features" className="py-20 md:py-32 bg-bg-primary relative overflow-hidden">
+      {/* Background soft glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-light/30 rounded-full blur-[120px] -z-10 pointer-events-none opacity-50" />
+      
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-20 md:mb-24">
+          <RotlessText variant="label" className="text-primary-default mb-4 uppercase tracking-widest font-bold">Chai Tapri</RotlessText>
+          <RotlessText variant="boom" className="mb-6 max-w-3xl mx-auto leading-tight text-4xl md:text-5xl">
+            An Indianised community-first discussion ecosystem.
+          </RotlessText>
         </div>
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -54,13 +59,18 @@ export const FeaturesSection = () => {
             <motion.div 
               key={index} 
               variants={itemVariants}
-              className="group p-8 rounded-3xl bg-bg-secondary border border-border-subtle hover:border-border-default transition-all duration-300 hover:shadow-sm"
+              className="group p-10 rounded-[32px] bg-bg-secondary border border-border-subtle hover:border-primary-default/30 transition-all duration-500 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden"
             >
-              <div className="w-14 h-14 rounded-2xl bg-bg-elevated border border-border-subtle flex items-center justify-center text-primary-default mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="absolute top-0 right-0 p-10 opacity-0 group-hover:opacity-5 transition-opacity duration-500 transform translate-x-1/4 -translate-y-1/4 scale-150 pointer-events-none">
                 {icons[index % icons.length]}
               </div>
-              <RotlessText variant="title" className="mb-3">{feature.title}</RotlessText>
-              <RotlessText variant="chat">{feature.description}</RotlessText>
+              
+              <div className="w-16 h-16 rounded-[20px] bg-bg-primary border border-border-subtle flex items-center justify-center text-primary-default mb-8 group-hover:scale-105 group-hover:shadow-sm transition-all duration-500 relative z-10">
+                {icons[index % icons.length]}
+              </div>
+              
+              <RotlessText variant="title" className="mb-4 text-xl md:text-2xl relative z-10">{feature.title}</RotlessText>
+              <RotlessText variant="chat" className="text-text-secondary text-[16px] leading-relaxed relative z-10">{feature.description}</RotlessText>
             </motion.div>
           ))}
         </motion.div>

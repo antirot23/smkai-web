@@ -7,8 +7,9 @@ import { MissionSection } from '../sections/MissionSection';
 import { FeaturedProductSection } from '../sections/FeaturedProductSection';
 import { FeaturesSection } from '../sections/FeaturesSection';
 import { VisionSection } from '../sections/VisionSection';
-import { TimelineSection } from '../sections/TimelineSection';
+import { BuiltBySection } from '../sections/BuiltBySection';
 import { FoundingTeamSection } from '../sections/FoundingTeamSection';
+import { RoadmapSection } from '../sections/RoadmapSection';
 import { FAQSection } from '../sections/FAQSection';
 import { MinigameSection } from '../sections/MinigameSection';
 import { ContactSection } from '../sections/ContactSection';
@@ -40,14 +41,15 @@ export const HomePage = () => {
   return (
     <div className="flex flex-col min-h-screen bg-bg-primary">
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow pt-10 md:pt-14">
         <HeroSection />
         <MissionSection />
         <FeaturedProductSection />
         <FeaturesSection />
         <VisionSection />
-        <TimelineSection />
+        <BuiltBySection />
         <FoundingTeamSection />
+        <RoadmapSection />
         <FAQSection />
         <MinigameSection />
         <ContactSection />

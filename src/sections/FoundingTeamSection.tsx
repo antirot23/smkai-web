@@ -58,7 +58,7 @@ export const FoundingTeamSection = () => {
                 <img 
                   src={member.image} 
                   alt={member.name} 
-                  className="w-full h-full object-cover object-top mix-blend-luminosity opacity-80 group-hover:mix-blend-normal group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
+                  className="w-full h-full object-cover object-top md:mix-blend-luminosity md:opacity-80 md:group-hover:mix-blend-normal md:group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
                 />
                 {/* Gradient Overlay strictly at the bottom for text readability */}
                 <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-bg-primary via-bg-primary/80 to-transparent" />
