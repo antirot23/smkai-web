@@ -1,73 +1,39 @@
-# React + TypeScript + Vite
+# AntiRot Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The official landing page and web presence for SMKAI Ventures and AntiRot. 
 
-Currently, two official plugins are available:
+## About
+AntiRot is not your ordinary social media or education app. We're replacing endless scrolling with meaningful thinking. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This repository contains the marketing site built to introduce users to the AntiRot mobile app, showcasing features like Chai Tapri and 1v1 Debates. It also serves as the corporate landing page for SMKAI Ventures Private Limited.
 
-## React Compiler
+## Tech Stack
+- **Framework:** React 19 + Vite
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion
+- **Package Manager:** Yarn (Berry)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Local Development
 
-## Expanding the ESLint configuration
+To run this project locally:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   yarn install
+   ```
+3. Start the dev server:
+   ```bash
+   yarn dev
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Deployment (Netlify)
+This project is configured for automated deployment on Netlify.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Build command:** `yarn build`
+- **Publish directory:** `dist`
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+*Note: The `.yarn/releases/` directory is checked into git to ensure the build server uses the exact same Yarn v4 version as local development.*
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Assets & Theming
+The design system, color variables (`src/index.css`), and brand assets (`src/assets/`) are mapped 1:1 with the core React Native application. If you need to update the scrolling phone screenshots in the Featured Product section, simply replace the JPEGs in `src/assets/screenshots/`.
