@@ -315,19 +315,19 @@ export const GravityGame = () => {
 
   return (
     <div className="w-full max-w-sm mx-auto bg-white/50 rounded-3xl border border-border-default p-3 sm:p-6 backdrop-blur-md shadow-lg touch-none select-none">
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 mb-4 text-center sm:text-left">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3 mb-4 text-center sm:text-left">
         <div 
-          className="text-primary-default font-bold uppercase tracking-wider text-[11px] sm:text-sm"
+          className="text-primary-default font-bold uppercase tracking-wider text-[9px] min-[375px]:text-[10px] sm:text-sm w-full break-words leading-relaxed"
           style={{ fontFamily: '"Press Start 2P", "Courier New", Courier, monospace' }}
         >
           Anti-Rot shooter
         </div>
-        <div className="bg-bg-dark px-3 py-1 rounded-full border border-white/10 shadow-sm whitespace-nowrap">
+        <div className="bg-bg-dark px-3 py-1 rounded-full border border-white/10 shadow-sm whitespace-nowrap shrink-0">
           <RotlessText variant="label" className="text-primary-default">Score: {score}</RotlessText>
         </div>
       </div>
 
-      <div className="relative w-full h-[400px] bg-bg-dark/90 rounded-2xl overflow-hidden border-2 border-border-subtle shadow-inner backdrop-blur-xl touch-none select-none">
+      <div className="relative w-full bg-bg-dark/90 rounded-2xl overflow-hidden border-2 border-border-subtle shadow-inner backdrop-blur-xl touch-none select-none" style={{ aspectRatio: '350/400' }}>
         <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
            {/* Subtle grid background */}
            <div className="w-full h-full" style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
