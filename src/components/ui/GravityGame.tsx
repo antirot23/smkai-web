@@ -314,20 +314,24 @@ export const GravityGame = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-sm mx-auto bg-white/50 rounded-3xl border border-border-default p-3 sm:p-6 backdrop-blur-md shadow-lg touch-none select-none">
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3 mb-4 text-center sm:text-left">
+    <div className="w-full max-w-[24rem] sm:max-w-sm mx-auto bg-white/50 rounded-3xl border border-border-default p-3 min-[375px]:p-4 sm:p-6 backdrop-blur-md shadow-lg">
+      <div className="flex flex-row items-center justify-between mb-4 w-full gap-2">
         <div 
-          className="text-primary-default font-bold uppercase tracking-wider text-[9px] min-[375px]:text-[10px] sm:text-sm w-full break-words leading-relaxed"
+          className="text-primary-default font-bold uppercase tracking-wider sm:tracking-widest text-[11px] min-[375px]:text-[13px] sm:text-sm text-left shrink"
           style={{ fontFamily: '"Press Start 2P", "Courier New", Courier, monospace' }}
         >
-          Anti-Rot shooter
+          <span className="sm:hidden">Anti-Rot shooter</span>
+          <span className="hidden sm:inline">Anti - Rot shooter</span>
         </div>
-        <div className="bg-bg-dark px-3 py-1 rounded-full border border-white/10 shadow-sm whitespace-nowrap shrink-0">
-          <RotlessText variant="label" className="text-primary-default">Score: {score}</RotlessText>
+        <div className="bg-bg-dark px-2 min-[375px]:px-3 py-1 rounded-full border border-white/10 shadow-sm whitespace-nowrap shrink-0">
+          <RotlessText variant="label" className="text-primary-default sm:!text-xs">Score: {score}</RotlessText>
         </div>
       </div>
 
-      <div className="relative w-full bg-bg-dark/90 rounded-2xl overflow-hidden border-2 border-border-subtle shadow-inner backdrop-blur-xl touch-none select-none" style={{ aspectRatio: '350/400' }}>
+      <div 
+        className="relative w-full h-auto sm:h-[400px] bg-bg-dark/90 rounded-2xl overflow-hidden border-2 border-border-subtle shadow-inner backdrop-blur-xl touch-none select-none"
+        style={{ aspectRatio: '7/8' }}
+      >
         <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
            {/* Subtle grid background */}
            <div className="w-full h-full" style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
@@ -344,9 +348,11 @@ export const GravityGame = () => {
         />
       </div>
       
-      <RotlessText variant="tiny" className="text-text-tertiary text-center mt-4">
-        Pull the mascot down and release to destroy the ROT.
-      </RotlessText>
+      <div className="mt-4 pb-1 sm:pb-0 w-full">
+        <RotlessText variant="tiny" className="text-text-tertiary text-center block w-full break-words">
+          Pull the mascot down and release to destroy the ROT.
+        </RotlessText>
+      </div>
     </div>
   );
 };

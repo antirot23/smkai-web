@@ -44,7 +44,7 @@ export const MissionSection = () => {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="relative h-[450px] lg:h-[600px] w-full rounded-[40px] overflow-hidden shadow-2xl bg-bg-secondary border border-border-subtle flex flex-col items-center justify-center p-8 lg:p-12 group"
+            className="relative h-auto min-h-[450px] lg:h-[600px] w-full rounded-[40px] overflow-hidden shadow-2xl bg-bg-secondary border border-border-subtle flex flex-col items-center justify-center p-6 sm:p-8 lg:p-12 group"
           >
             {/* Subtle radial gradient background */}
             {/* Subtle radial gradient background */}
