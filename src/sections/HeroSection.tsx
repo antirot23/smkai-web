@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { RotlessText } from '../components/ui/RotlessText';
 import { Button } from '../components/ui/Button';
-import { HERO_DATA, COMPANY } from '@/constants';
+import { HERO_DATA } from '@/constants';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { JumboText } from '../components/ui/JumboText';
 
