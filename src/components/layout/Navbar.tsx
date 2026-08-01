@@ -13,7 +13,7 @@ const navLinks = [
   { name: 'Why It Matters', href: '#vision' },
 ];
 
-const INSTAGRAM_URL = "https://www.instagram.com/k_shastri03/";
+
 
 const easeOutCubic: [number, number, number, number] = [0.33, 1, 0.68, 1];
 const easeInOutCubic: [number, number, number, number] = [0.65, 0, 0.35, 1];

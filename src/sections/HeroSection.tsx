@@ -5,7 +5,7 @@ import { HERO_DATA } from '@/constants';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { JumboText } from '../components/ui/JumboText';
 
-const INSTAGRAM_URL = "https://www.instagram.com/k_shastri03/";
+
 
 export const HeroSection = () => {
   const { scrollY } = useScroll();
