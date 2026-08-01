@@ -72,9 +72,9 @@ export const ContactSection = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="https://www.instagram.com/k_shastri03/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto shrink-0">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd3NG6TAiwc6lQxkNLwVegiMS19ck20qpmhcORqQObo83xPww/viewform?usp=sharing&ouid=116044772597740770916" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto shrink-0">
                 <Button variant="outline" className="w-full sm:w-auto flex items-center justify-center gap-2 group border-border-default hover:bg-bg-elevated hover:border-text-secondary">
-                  Join Instagram
+                  Join the Beta
                 </Button>
               </a>
             </div>

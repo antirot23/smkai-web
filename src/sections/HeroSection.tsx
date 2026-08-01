@@ -84,9 +84,9 @@ export const HeroSection = () => {
             transition={{ duration: 1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full"
           >
-            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto group">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd3NG6TAiwc6lQxkNLwVegiMS19ck20qpmhcORqQObo83xPww/viewform?usp=sharing&ouid=116044772597740770916" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto group">
               <Button className="px-8 py-4 text-[15px] font-medium w-full shadow-lg shadow-primary-default/20 flex items-center justify-center gap-2 group-hover:scale-[1.02] transition-transform">
-                Connect on Instagram
+                Join the Beta
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>

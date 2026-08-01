@@ -92,8 +92,8 @@ export const Navbar = () => {
       >
         <span className="text-sm font-medium tracking-wide">✨ Antirot Beta is Opening</span>
         <span className="hidden md:inline text-sm opacity-80">- We're looking for early testers to shape the future.</span>
-        <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-sm font-bold underline underline-offset-2 hover:opacity-80 transition-opacity flex items-center gap-1">
-          Connect on Insta <ArrowRight size={14} />
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd3NG6TAiwc6lQxkNLwVegiMS19ck20qpmhcORqQObo83xPww/viewform?usp=sharing&ouid=116044772597740770916" target="_blank" rel="noopener noreferrer" className="text-sm font-bold underline underline-offset-2 hover:opacity-80 transition-opacity flex items-center gap-1">
+          Join the Beta <ArrowRight size={14} />
         </a>
       </motion.div>
 
@@ -210,13 +210,13 @@ export const Navbar = () => {
                     className="mt-2 pt-4 border-t border-border-subtle"
                   >
                     <a 
-                      href={INSTAGRAM_URL}
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSd3NG6TAiwc6lQxkNLwVegiMS19ck20qpmhcORqQObo83xPww/viewform?usp=sharing&ouid=116044772597740770916"
                       target="_blank" 
                       rel="noopener noreferrer"
                       onClick={() => setMobileMenuOpen(false)}
                       className="w-full flex items-center justify-center gap-2 py-4 rounded-full bg-primary-default hover:bg-primary-hover text-white font-medium text-[17px] active:scale-[0.98] transition-all duration-300 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-default focus-visible:ring-offset-2"
                     >
-                      Connect with us on Instagram
+                      Join the Beta
                     </a>
                   </motion.div>
                 </motion.div>
