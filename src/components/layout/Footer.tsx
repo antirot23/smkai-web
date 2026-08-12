@@ -54,6 +54,7 @@ export const Footer = () => {
               <li><Link to="/guidelines" className="text-text-tertiary hover:text-white transition-colors text-[15px]">Community Guidelines</Link></li>
               <li><Link to="/privacy" className="text-text-tertiary hover:text-white transition-colors text-[15px]">Privacy Policy</Link></li>
               <li><Link to="/terms" className="text-text-tertiary hover:text-white transition-colors text-[15px]">Terms of Service</Link></li>
+              <li><Link to="/delete-account" className="text-text-tertiary hover:text-white transition-colors text-[15px]">Delete Account</Link></li>
             </ul>
             <div className="mt-8">
               <span className="text-xs text-white/30 tracking-widest uppercase mb-2 block">Incorporated</span>

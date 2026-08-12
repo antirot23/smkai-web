@@ -281,14 +281,18 @@ export const PrivacyPolicyPage: React.FC = () => {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-semibold text-text-primary tracking-tight mt-12 mb-6">9. ACCOUNT DELETION</h2>
-            <p>Users may request account deletion.</p>
-            <p>Upon successful deletion request:</p>
+            <h2 className="text-2xl font-semibold text-text-primary tracking-tight mt-12 mb-6">9. ACCOUNT & DATA DELETION</h2>
+            <p>You may request the deletion of your account and personal data at any time.</p>
+            <p><strong>How to delete your account:</strong></p>
             <ul className="list-disc pl-6 space-y-2 mt-2">
-              <li>Public profile information may be removed.</li>
-              <li>Future access may be disabled.</li>
-              <li>Certain information may be retained where legally required.</li>
-              <li>Content already shared publicly may remain visible where technically necessary or legally permitted.</li>
+              <li><strong>In-App:</strong> Go to Profile &gt; Manage Profile &gt; Delete account.</li>
+              <li><strong>On the Web:</strong> Visit our <a href="/delete-account" className="text-primary-default hover:underline">Account Deletion Page</a> for instructions on submitting a manual request.</li>
+            </ul>
+            <p className="mt-4">Upon successful deletion:</p>
+            <ul className="list-disc pl-6 space-y-2 mt-2">
+              <li>Your personal profile information, authentication sessions, and uploaded media will be permanently deleted.</li>
+              <li>To maintain the integrity of shared communities and conversations, your shared messages (e.g., in Tapris or Chat Buddy) will be anonymized and appear as coming from a "Deleted User".</li>
+              <li>Certain information may be retained where legally required or for security and fraud prevention purposes.</li>
             </ul>
           </section>
 

@@ -4,6 +4,7 @@ import { HomePage } from './pages/HomePage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from './pages/TermsOfServicePage';
 import { CommunityGuidelinesPage } from './pages/CommunityGuidelinesPage';
+import { DeleteAccountPage } from './pages/DeleteAccountPage';
 import { ScrollToTop } from './components/ScrollToTop';
 import { BackToTopButton } from './components/ui/BackToTopButton';
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/privacy" element={<PrivacyPolicyPage />} />
           <Route path="/terms" element={<TermsOfServicePage />} />
           <Route path="/guidelines" element={<CommunityGuidelinesPage />} />
+          <Route path="/delete-account" element={<DeleteAccountPage />} />
         </Routes>
         <BackToTopButton />
       </Router>
