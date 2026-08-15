@@ -171,6 +171,9 @@ export const TermsOfServicePage: React.FC = () => {
               <li>Create fraudulent accounts</li>
               <li>Upload malware or harmful code</li>
             </ul>
+            <p>
+              <strong>Child Endangerment and Child Sexual Abuse Material (CSAM):</strong> We have a zero-tolerance policy for any content that endangers children or promotes, shares, or depicts Child Sexual Abuse Material.
+            </p>
             <p>AntiRot reserves sole discretion in determining violations.</p>
           </section>
 
@@ -350,6 +353,12 @@ export const TermsOfServicePage: React.FC = () => {
                 Email:{' '}
                 <a href="mailto:Antirot12@gmail.com" className="text-primary-default hover:underline">
                   [Antirot12@gmail.com]
+                </a>
+              </p>
+              <p>
+                Safety Contact / Child Safety Contact:{' '}
+                <a href="mailto:Antirot12@gmail.com" className="text-primary-default hover:underline">
+                  Antirot12@gmail.com
                 </a>
               </p>
               <p>

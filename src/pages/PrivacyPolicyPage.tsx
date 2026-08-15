@@ -364,6 +364,12 @@ export const PrivacyPolicyPage: React.FC = () => {
                 </a>
               </p>
               <p>
+                Safety Contact / Child Safety Contact:{' '}
+                <a href="mailto:Antirot12@gmail.com" className="text-primary-default hover:underline">
+                  Antirot12@gmail.com
+                </a>
+              </p>
+              <p>
                 Website:{' '}
                 <a href="https://smkaiventures.com" target="_blank" rel="noopener noreferrer" className="text-primary-default hover:underline">
                   [smkaiventures.com]
