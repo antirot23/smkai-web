@@ -172,7 +172,7 @@ export const TermsOfServicePage: React.FC = () => {
               <li>Upload malware or harmful code</li>
             </ul>
             <p>
-              <strong>Child Endangerment and Child Sexual Abuse Material (CSAM):</strong> We have a zero-tolerance policy for any content that endangers children or promotes, shares, or depicts Child Sexual Abuse Material.
+              <strong>Child Endangerment and Child Sexual Abuse Material (CSAM):</strong> We have a zero-tolerance policy for any content that endangers children or promotes, shares, or depicts Child Sexual Abuse Material. We strictly adhere to our <a href="https://support.google.com/googleplay/android-developer/answer/14747720#4" target="_blank" rel="noopener noreferrer" className="text-primary-default hover:underline">externally published standards against Child Sexual Abuse and Exploitation (CSAE)</a>.
             </p>
             <p>AntiRot reserves sole discretion in determining violations.</p>
           </section>
@@ -355,12 +355,22 @@ export const TermsOfServicePage: React.FC = () => {
                   [Antirot12@gmail.com]
                 </a>
               </p>
-              <p>
-                Safety Contact / Child Safety Contact:{' '}
-                <a href="mailto:Antirot12@gmail.com" className="text-primary-default hover:underline">
-                  Antirot12@gmail.com
+              <div>
+                <p>
+                  Safety Contact / Child Safety Contact:{' '}
+                  <a href="mailto:Antirot12@gmail.com" className="text-primary-default hover:underline">
+                    Antirot12@gmail.com
+                  </a>
+                </p>
+                <a 
+                  href="https://support.google.com/googleplay/android-developer/answer/14747720#4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 mt-3 text-sm font-medium rounded-lg bg-text-primary text-bg-primary hover:opacity-90 transition-opacity"
+                >
+                  View our CSAE Standards
                 </a>
-              </p>
+              </div>
               <p>
                 Website:{' '}
                 <a href="https://smkaiventures.com" target="_blank" rel="noopener noreferrer" className="text-primary-default hover:underline">
