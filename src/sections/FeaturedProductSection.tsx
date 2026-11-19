@@ -53,7 +53,12 @@ export const FeaturedProductSection = () => {
           >
             {PRODUCT_DATA.features.map((feature, idx) => (
               <div key={idx} className="bg-white/5 border border-white/10 p-8 rounded-[32px] backdrop-blur-md hover:bg-white/10 transition-colors duration-300 group">
-                <RotlessText variant="title" className="text-white mb-3 text-xl group-hover:text-primary-default transition-colors">{feature.title}</RotlessText>
+                <div className="flex items-center gap-3 mb-3 flex-wrap">
+                  <RotlessText variant="title" className="text-white text-xl group-hover:text-primary-default transition-colors">{feature.title}</RotlessText>
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-primary-default/20 text-primary-default border border-primary-default/30">
+                    Available now
+                  </span>
+                </div>
                 <RotlessText variant="chat" className="text-text-tertiary leading-relaxed text-[15px]">
                   {feature.description}
                 </RotlessText>
@@ -79,7 +84,7 @@ export const FeaturedProductSection = () => {
                   <motion.img
                     key={currentIndex}
                     src={SCREENSHOTS[currentIndex]}
-                    alt={`Antirot App Screenshot ${currentIndex + 1}`}
+                    alt={`AntiRot app screenshot ${currentIndex + 1}`}
                     className="absolute inset-0 w-full h-full object-cover"
                     initial={{ opacity: 0, scale: 1.05 }}
                     animate={{ opacity: 1, scale: 1 }}

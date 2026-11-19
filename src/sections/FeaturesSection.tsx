@@ -69,7 +69,18 @@ export const FeaturesSection = () => {
                 {icons[index % icons.length]}
               </div>
               
-              <RotlessText variant="title" className="mb-4 text-xl md:text-2xl relative z-10">{feature.title}</RotlessText>
+              <div className="flex items-center gap-3 mb-4 relative z-10 flex-wrap">
+                <RotlessText variant="title" className="text-xl md:text-2xl">{feature.title}</RotlessText>
+                <span
+                  className={`text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border ${
+                    feature.status === 'available'
+                      ? 'bg-primary-light/60 text-primary-dark border-primary-default/20'
+                      : 'bg-bg-primary text-text-tertiary border-border-subtle'
+                  }`}
+                >
+                  {feature.status === 'available' ? 'Available now' : 'In testing'}
+                </span>
+              </div>
               <RotlessText variant="chat" className="text-text-secondary text-[16px] leading-relaxed relative z-10">{feature.description}</RotlessText>
             </motion.div>
           ))}

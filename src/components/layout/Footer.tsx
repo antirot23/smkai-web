@@ -31,12 +31,13 @@ export const Footer = () => {
           </div>
           
           <div className="col-span-1 md:col-span-3 lg:col-span-2 md:col-start-6">
-            <RotlessText variant="label" className="text-white/40 mb-6 uppercase tracking-widest text-xs font-bold">Antirot</RotlessText>
+            <RotlessText variant="label" className="text-white/40 mb-6 uppercase tracking-widest text-xs font-bold">AntiRot</RotlessText>
             <ul className="space-y-4">
               <li><a href="#mission" className="text-text-tertiary hover:text-primary-default transition-colors text-[15px]">The Problem</a></li>
               <li><a href="#product" className="text-text-tertiary hover:text-primary-default transition-colors text-[15px]">How it Works</a></li>
               <li><a href="#features" className="text-text-tertiary hover:text-primary-default transition-colors text-[15px]">Chai Tapri</a></li>
-              <li><a href="#vision" className="text-text-tertiary hover:text-primary-default transition-colors text-[15px]">Philosophy</a></li>
+              <li><a href="https://joinantirot.com/" target="_blank" rel="noopener noreferrer" className="text-text-tertiary hover:text-primary-default transition-colors text-[15px]">AntiRot website</a></li>
+              <li><a href={COMPANY.playStoreUrl} target="_blank" rel="noopener noreferrer" className="text-text-tertiary hover:text-primary-default transition-colors text-[15px]">Google Play</a></li>
             </ul>
           </div>
           

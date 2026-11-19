@@ -1,12 +1,21 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { SeoHead } from '@/seo/SeoHead';
+import { PAGE_SEO } from '@/seo/siteConfig';
+import { breadcrumbSchema, webPageSchema } from '@/seo/schema';
 
 export const PrivacyPolicyPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-bg-primary text-text-primary py-16 sm:py-24 px-6 sm:px-8 lg:px-12 selection:bg-primary-light selection:text-primary-dark">
-      <Helmet>
-        <title>Privacy Policy - AntiRot</title>
-      </Helmet>
+      <SeoHead
+        page={PAGE_SEO.privacy}
+        jsonLd={[
+          webPageSchema(PAGE_SEO.privacy.title, PAGE_SEO.privacy.path, PAGE_SEO.privacy.description),
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Privacy Policy', path: '/privacy' },
+          ]),
+        ]}
+      />
 
       <div className="max-w-[800px] mx-auto">
         {/* Header */}

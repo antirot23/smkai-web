@@ -12,6 +12,14 @@ import { FoundingTeamSection } from '../sections/FoundingTeamSection';
 import { RoadmapSection } from '../sections/RoadmapSection';
 import { FAQSection } from '../sections/FAQSection';
 import { MinigameSection } from '../sections/MinigameSection';
+import { SeoHead } from '@/seo/SeoHead';
+import { PAGE_SEO } from '@/seo/siteConfig';
+import {
+  organizationSchema,
+  softwareApplicationSchema,
+  webSiteSchema,
+  webPageSchema,
+} from '@/seo/schema';
 
 export const HomePage = () => {
   useEffect(() => {
@@ -39,6 +47,15 @@ export const HomePage = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-primary">
+      <SeoHead
+        page={PAGE_SEO.home}
+        jsonLd={[
+          organizationSchema(),
+          softwareApplicationSchema(),
+          webSiteSchema(),
+          webPageSchema(PAGE_SEO.home.title, '/', PAGE_SEO.home.description),
+        ]}
+      />
       <Navbar />
       <main className="flex-grow pt-10 md:pt-14">
         <HeroSection />

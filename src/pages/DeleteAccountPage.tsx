@@ -1,13 +1,22 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { SeoHead } from '@/seo/SeoHead';
+import { PAGE_SEO } from '@/seo/siteConfig';
+import { breadcrumbSchema, webPageSchema } from '@/seo/schema';
 
 export const DeleteAccountPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-bg-primary text-text-primary py-16 sm:py-24 px-6 sm:px-8 lg:px-12 selection:bg-primary-light selection:text-primary-dark">
-      <Helmet>
-        <title>Account Deletion - AntiRot</title>
-      </Helmet>
+      <SeoHead
+        page={PAGE_SEO.deleteAccount}
+        jsonLd={[
+          webPageSchema(PAGE_SEO.deleteAccount.title, PAGE_SEO.deleteAccount.path, PAGE_SEO.deleteAccount.description),
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Delete Account', path: '/delete-account' },
+          ]),
+        ]}
+      />
 
       <div className="max-w-[800px] mx-auto">
         <header className="mb-12">

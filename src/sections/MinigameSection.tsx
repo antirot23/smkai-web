@@ -59,11 +59,18 @@ export const MinigameSection = () => {
                   </div>
                 </div>
                 
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd3NG6TAiwc6lQxkNLwVegiMS19ck20qpmhcORqQObo83xPww/viewform?usp=sharing&ouid=116044772597740770916" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto shrink-0">
-                  <Button variant="outline" className="w-full sm:w-auto flex items-center justify-center gap-2 group border-border-default hover:bg-bg-elevated hover:border-text-secondary">
-                    Join the Beta
-                  </Button>
-                </a>
+                <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                  <a href="https://play.google.com/store/apps/details?id=com.antirot" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto shrink-0">
+                    <Button className="w-full sm:w-auto flex items-center justify-center gap-2">
+                      Get on Google Play
+                    </Button>
+                  </a>
+                  <a href="https://joinantirot.com/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto shrink-0">
+                    <Button variant="outline" className="w-full sm:w-auto flex items-center justify-center gap-2 group border-border-default hover:bg-bg-elevated hover:border-text-secondary">
+                      AntiRot website
+                    </Button>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

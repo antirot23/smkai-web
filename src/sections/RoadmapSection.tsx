@@ -13,9 +13,9 @@ export const RoadmapSection = () => {
         
         <div className="text-center mb-16 md:mb-20">
           <RotlessText variant="label" className="text-primary-default mb-4 uppercase tracking-widest font-bold">What Comes Next</RotlessText>
-          <RotlessText variant="boom" className="mb-6">The Antirot Roadmap</RotlessText>
+          <RotlessText variant="boom" className="mb-6">The AntiRot Roadmap</RotlessText>
           <RotlessText variant="normal" className="text-text-secondary max-w-2xl mx-auto">
-            We are building in public. Here is our path to creating the thinking platform of tomorrow.
+            What is shipping on Android today, what remains in testing, and what comes next — without overselling gated features.
           </RotlessText>
         </div>
 
@@ -31,7 +31,7 @@ export const RoadmapSection = () => {
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative z-10">
             {ROADMAP_DATA.map((step, index) => (
               <motion.div 
                 key={index}
