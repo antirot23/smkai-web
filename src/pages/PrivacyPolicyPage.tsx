@@ -15,7 +15,7 @@ export const PrivacyPolicyPage: React.FC = () => {
             Privacy Policy
           </h1>
           <p className="text-text-secondary text-lg">
-            Last Updated: [21 June 2026]
+            Last Updated: 19 November 2026
           </p>
           <hr className="mt-10 border-border-default" />
         </header>
@@ -338,29 +338,79 @@ export const PrivacyPolicyPage: React.FC = () => {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-semibold text-text-primary tracking-tight mt-12 mb-6">14. THIRD-PARTY LINKS</h2>
-            <p>AntiRot may contain links to third-party websites, communities, advertisers, sponsors, or services.</p>
-            <p>AntiRot is not responsible for the privacy practices of third-party platforms.</p>
-            <p>Users should review the privacy policies of those services independently.</p>
+            <h2 className="text-2xl font-semibold text-text-primary tracking-tight mt-12 mb-6">
+              14. THIRD-PARTY LINKS AND UNAUTHORISED ACCESS
+            </h2>
+            <p>
+              AntiRot may contain links to third-party websites, communities, advertisers, sponsors or external
+              services.
+            </p>
+            <p>
+              SMKAI Ventures Private Limited does not sell, rent, trade or commercially disclose users' personal
+              information to unauthorised third parties.
+            </p>
+            <p>
+              No third party, individual, advertiser, creator, developer or external organisation is permitted to
+              access, collect, extract, disclose, copy, distribute or misuse users' personal information without
+              proper authorisation and a lawful basis.
+            </p>
+            <p>
+              Access to personal information may be provided to authorised service providers and data processors
+              strictly where necessary to operate, maintain, secure or improve AntiRot, subject to appropriate
+              contractual confidentiality and data-protection obligations.
+            </p>
+            <p>
+              The Company may disclose information where required by applicable law, a valid legal process or a
+              competent government authority.
+            </p>
+            <p>
+              AntiRot shall take reasonable technical and organisational measures to protect personal information
+              against unauthorised access, disclosure, alteration, loss or misuse.
+            </p>
+            <p>
+              Users should independently review the privacy policies of third-party platforms they choose to
+              access.
+            </p>
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-semibold text-text-primary tracking-tight mt-12 mb-6">15. CHANGES TO THIS POLICY</h2>
-            <p>AntiRot may update this Privacy Policy periodically.</p>
-            <p>Updated versions become effective upon publication.</p>
-            <p>Continued use of AntiRot after updates constitutes acceptance of the revised policy.</p>
+            <h2 className="text-2xl font-semibold text-text-primary tracking-tight mt-12 mb-6">
+              15. CHANGES TO THIS PRIVACY POLICY
+            </h2>
+            <p>
+              SMKAI Ventures Private Limited reserves the right to revise, modify, update or replace this Privacy
+              Policy from time to time to reflect changes in technology, business operations, applicable laws or
+              data-protection practices.
+            </p>
+            <p>
+              Updated versions shall be published on the official AntiRot website or within the application,
+              together with the revised effective date.
+            </p>
+            <p>
+              Where required by applicable law, users shall be notified of material changes and fresh consent
+              shall be obtained where necessary.
+            </p>
+            <p>
+              Continued use of AntiRot shall not override any consent or notification requirement imposed by
+              applicable law.
+            </p>
           </section>
 
-          <section className="space-y-4 pb-8">
-            <h2 className="text-2xl font-semibold text-text-primary tracking-tight mt-12 mb-6">16. CONTACT INFORMATION</h2>
-            <p>For privacy-related concerns, requests, complaints, or inquiries:</p>
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold text-text-primary tracking-tight mt-12 mb-6">
+              16. CONTACT INFORMATION AND PRIVACY COMPLAINTS
+            </h2>
+            <p>
+              For privacy-related concerns, personal data requests, complaints, security incidents or inquiries,
+              users may contact:
+            </p>
             <div className="mt-4 space-y-1">
-              <p>Privacy Officer</p>
+              <p>Privacy Officer / Grievance Contact</p>
               <p>SMKAI Ventures Private Limited</p>
               <p>
                 Email:{' '}
                 <a href="mailto:Antirot12@gmail.com" className="text-primary-default hover:underline">
-                  [Antirot12@gmail.com]
+                  Antirot12@gmail.com
                 </a>
               </p>
               <p>
@@ -371,19 +421,69 @@ export const PrivacyPolicyPage: React.FC = () => {
               </p>
               <p>
                 Website:{' '}
-                <a href="https://smkaiventures.com" target="_blank" rel="noopener noreferrer" className="text-primary-default hover:underline">
-                  [smkaiventures.com]
+                <a
+                  href="https://smkaiventures.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-default hover:underline"
+                >
+                  https://smkaiventures.com
                 </a>
               </p>
             </div>
-            <p className="mt-4">Response timelines shall be governed by applicable laws and company policies.</p>
+            <p className="mt-4">
+              The Company shall address privacy complaints and requests in accordance with applicable laws and
+              prescribed timelines.
+            </p>
           </section>
-          
+
+          <section className="space-y-4 pb-8">
+            <h2 className="text-2xl font-semibold text-text-primary tracking-tight mt-12 mb-6">
+              17. INTELLECTUAL PROPERTY, COPYRIGHT AND UNAUTHORISED REPRODUCTION
+            </h2>
+            <p>
+              This Privacy Policy, including its original written content, structure, presentation, organisation
+              and other original materials, is the intellectual property of SMKAI Ventures Private Limited, to
+              the extent protected by applicable intellectual property laws.
+            </p>
+            <p>© 2026 SMKAI Ventures Private Limited. All Rights Reserved.</p>
+            <p>
+              No individual, company, organisation, developer, website, application or third party may, without
+              prior written permission from SMKAI Ventures Private Limited:
+            </p>
+            <ol className="list-decimal pl-6 space-y-2 mt-2 mb-4">
+              <li>Reproduce or copy this Privacy Policy in whole or in substantial part.</li>
+              <li>Republish, distribute or commercially exploit its original content.</li>
+              <li>Modify, adapt or present substantial portions of this policy as their own original work.</li>
+              <li>
+                Use the Company's proprietary text, branding, documentation or other protected materials in
+                another application, website or commercial product.
+              </li>
+              <li>
+                Misrepresent any copied material as being officially associated with AntiRot or SMKAI Ventures
+                Private Limited.
+              </li>
+            </ol>
+            <p>
+              Unauthorised use, reproduction, distribution or commercial exploitation of protected materials may
+              result in appropriate legal action under applicable Indian intellectual property laws, including
+              the Copyright Act, 1957, where applicable.
+            </p>
+            <p>
+              Nothing in this section restricts independent creation, lawful use of public-domain materials,
+              statutory rights or other uses permitted by applicable law.
+            </p>
+            <p>
+              No ownership of users' personal information or user-generated content is claimed merely by virtue
+              of this Privacy Policy. Such information and content shall be governed by their applicable terms,
+              licences and legal rights.
+            </p>
+          </section>
         </main>
 
         <footer className="mt-16 pt-8 border-t border-border-default text-center">
           <p className="text-sm text-text-tertiary">
-            © 2026 Antirot. All Rights Reserved.
+            © 2026 SMKAI Ventures Private Limited. All Rights Reserved.
           </p>
         </footer>
       </div>
