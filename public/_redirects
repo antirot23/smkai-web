@@ -1,1 +1,4 @@
+# Keep AdMob crawl file as a static asset (never SPA HTML).
+/app-ads.txt  /app-ads.txt  200
+
 /*    /index.html   200
