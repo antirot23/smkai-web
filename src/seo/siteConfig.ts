@@ -24,7 +24,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   home: {
     title: 'SMKAI Ventures — Builders of AntiRot',
     description:
-      'SMKAI Ventures builds AntiRot, the Android social app that rewards thinking and participation over doomscrolling. Learn what ships today, what is in testing, and how to get the app.',
+      'SMKAI Ventures builds AntiRot — THE NEXT GENERATION Social media. Learn what ships today, what is in testing, and how to get the app.',
     path: '/',
   },
   privacy: {

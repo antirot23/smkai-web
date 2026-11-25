@@ -12,9 +12,9 @@ export const COMPANY = {
 
 export const HERO_DATA = {
   badge: PRODUCT_TRUTH.releaseStatus.label,
-  headline: 'A social ecosystem that rewards thinking, not scrolling.',
+  headline: PRODUCT_TRUTH.brand.tagline,
   subheadline:
-    'AntiRot turns daily questions and ideas into short video perspectives, Tapri conversations, and collaborative storytelling. Built by SMKAI Ventures for people who want participation — not doomscrolling.',
+    'AntiRot turns daily questions and ideas into short video perspectives, Tapri conversations, and collaborative storytelling. Built by SMKAI Ventures for the next generation of social media.',
 };
 
 export const MISSION_DATA = {

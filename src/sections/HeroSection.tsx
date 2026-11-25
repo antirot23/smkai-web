@@ -64,7 +64,7 @@ export const HeroSection = () => {
             transition={{ duration: 1.4, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           >
             <RotlessText variant="scream" className="w-full md:max-w-4xl mx-auto mb-6 text-[3.5rem] md:text-[5rem] leading-[1.1] md:leading-[1.05] tracking-tight text-text-primary">
-              The social platform that rewards <span className="font-accent text-primary-default font-normal px-2 italic">thinking</span>, not scrolling.
+              THE NEXT GENERATION <span className="font-accent text-primary-default font-normal px-2 italic">Social</span> media
             </RotlessText>
           </motion.div>
 

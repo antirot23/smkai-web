@@ -15,7 +15,7 @@ export const PRODUCT_TRUTH = {
   brand: {
     name: 'AntiRot',
     alternateNames: ['Anti Rot', 'Antirot'],
-    tagline: "Think. Don't Doomscroll.",
+    tagline: 'THE NEXT GENERATION Social media',
     positioning:
       'A social app that rewards participation over passive scrolling — daily questions, short video perspectives, and community conversation spaces.',
     philosophy:
@@ -178,7 +178,7 @@ export const PRODUCT_TRUTH = {
     'Idea-first loop: questions and headlines invite responses instead of pure influencer feeds.',
     'Indianised community framing through Chai Tapri stalls and Tapri rooms.',
     'Structured social modes: timed Chat Buddy, collaborative Pass the Cup writing, short video Sips.',
-    'Participation over passive doomscrolling as the product philosophy.',
+    'Participation over passive scrolling as the product philosophy.',
   ],
   safetyNotes: [
     'Not intended for users under 13.',
