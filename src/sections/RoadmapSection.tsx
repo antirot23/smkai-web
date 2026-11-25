@@ -15,7 +15,7 @@ export const RoadmapSection = () => {
           <RotlessText variant="label" className="text-primary-default mb-4 uppercase tracking-widest font-bold">What Comes Next</RotlessText>
           <RotlessText variant="boom" className="mb-6">The AntiRot Roadmap</RotlessText>
           <RotlessText variant="normal" className="text-text-secondary max-w-2xl mx-auto">
-            What is shipping on Android today, what remains in testing, and what comes next — without overselling gated features.
+            What is shipping on Android today, what remains in testing, and what comes next - without overselling gated features.
           </RotlessText>
         </div>
 

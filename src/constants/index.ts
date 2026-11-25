@@ -26,7 +26,7 @@ export const MISSION_DATA = {
     {
       title: 'Active Participation',
       description:
-        "You don't just consume content. Interactions begin with ideas — Daily Friction prompts, Sip responses, and community rooms that ask you to show up.",
+        "You don't just consume content. Interactions begin with ideas - Daily Friction prompts, Sip responses, and community rooms that ask you to show up.",
     },
     {
       title: 'Reputation Driven',
@@ -43,7 +43,7 @@ export const PRODUCT_DATA = {
     {
       title: 'Daily Friction',
       description:
-        'The intellectual heartbeat of AntiRot. Each day, Home surfaces current-affairs questions that invite thought — and Sip responses.',
+        'The intellectual heartbeat of AntiRot. Each day, Home surfaces current-affairs questions that invite thought - and Sip responses.',
       status: 'available' as const,
     },
     {
@@ -82,7 +82,7 @@ export const CHAI_TAPRI_FEATURES = [
   {
     title: 'Current Affairs Adda',
     description:
-      'Structured headline discussion rooms. Built and in testing — currently off by default pending rollout.',
+      'Structured headline discussion rooms. Built and in testing - currently off by default pending rollout.',
     status: 'testing' as const,
   },
   {
@@ -142,7 +142,7 @@ export const FAQ_DATA = [
   {
     question: 'What makes AntiRot different from traditional social media?',
     answer:
-      'Instead of endless feeds designed to keep you scrolling, AntiRot centers daily thinking questions, short video responses (Sips), and structured community spaces. The goal is participation — not passive consumption.',
+      'Instead of endless feeds designed to keep you scrolling, AntiRot centers daily thinking questions, short video responses (Sips), and structured community spaces. The goal is participation - not passive consumption.',
   },
   {
     question: 'What is available in AntiRot today?',
@@ -162,7 +162,7 @@ export const FAQ_DATA = [
   {
     question: 'How do you plan to monetize?',
     answer:
-      'AntiRot is free to install. An optional AntiRot+ plan is designed for higher participation limits; checkout is currently gated. Longer-term ideas include responsible sponsorship and creator support — those are not live claims.',
+      'AntiRot is free to install. An optional AntiRot+ plan is designed for higher participation limits; checkout is currently gated. Longer-term ideas include responsible sponsorship and creator support - those are not live claims.',
   },
   {
     question: 'Who is the team behind this?',

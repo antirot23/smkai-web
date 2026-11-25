@@ -91,7 +91,7 @@ export const Navbar = () => {
         className="bg-primary-default text-bg-primary py-2 px-4 text-center relative z-50 flex items-center justify-center gap-3 overflow-hidden"
       >
         <span className="text-sm font-medium tracking-wide">AntiRot is on Google Play</span>
-        <span className="hidden md:inline text-sm opacity-80">— Android app from SMKAI Ventures. THE NEXT GENERATION Social media.</span>
+        <span className="hidden md:inline text-sm opacity-80">- Android app from SMKAI Ventures. THE NEXT GENERATION Social media.</span>
         <a href="https://play.google.com/store/apps/details?id=com.antirot" target="_blank" rel="noopener noreferrer" className="text-sm font-bold underline underline-offset-2 hover:opacity-80 transition-opacity flex items-center gap-1">
           Get the app <ArrowRight size={14} />
         </a>

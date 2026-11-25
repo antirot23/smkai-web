@@ -17,9 +17,9 @@ export const PRODUCT_TRUTH = {
     alternateNames: ['Anti Rot', 'Antirot'],
     tagline: 'THE NEXT GENERATION Social media',
     positioning:
-      'A social app that rewards participation over passive scrolling — daily questions, short video perspectives, and community conversation spaces.',
+      'A social app that rewards participation over passive scrolling - daily questions, short video perspectives, and community conversation spaces.',
     philosophy:
-      'Humanity did not evolve through scrolling. It evolved through questions. AntiRot is built for active participation: respond, discuss, match, and create — not endless consumption.',
+      'Humanity did not evolve through scrolling. It evolved through questions. AntiRot is built for active participation: respond, discuss, match, and create - not endless consumption.',
   },
   company: {
     name: 'SMKAI Ventures',
@@ -63,7 +63,7 @@ export const PRODUCT_TRUTH = {
       id: 'daily-friction',
       name: 'Daily Friction',
       shortDescription:
-        'Daily current-affairs questions on Home that spark thought and invite Sip responses — typically multiple prompts, not a single question.',
+        'Daily current-affairs questions on Home that spark thought and invite Sip responses - typically multiple prompts, not a single question.',
       status: 'available',
       category: 'core',
     },

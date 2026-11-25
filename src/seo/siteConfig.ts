@@ -22,25 +22,25 @@ export type PageSeo = {
 
 export const PAGE_SEO: Record<string, PageSeo> = {
   home: {
-    title: 'SMKAI Ventures — Builders of AntiRot',
+    title: 'SMKAI Ventures - Builders of AntiRot',
     description:
-      'SMKAI Ventures builds AntiRot — THE NEXT GENERATION Social media. Learn what ships today, what is in testing, and how to get the app.',
+      'SMKAI Ventures builds AntiRot - THE NEXT GENERATION Social media. Learn what ships today, what is in testing, and how to get the app.',
     path: '/',
   },
   privacy: {
-    title: 'Privacy Policy — AntiRot | SMKAI Ventures',
+    title: 'Privacy Policy - AntiRot | SMKAI Ventures',
     description:
       'How AntiRot and SMKAI Ventures Private Limited collect, use, and protect personal data. Account deletion and privacy rights explained.',
     path: '/privacy',
   },
   terms: {
-    title: 'Terms of Service — AntiRot | SMKAI Ventures',
+    title: 'Terms of Service - AntiRot | SMKAI Ventures',
     description:
       'Terms and conditions for using AntiRot, including eligibility, community standards, and platform rules from SMKAI Ventures.',
     path: '/terms',
   },
   guidelines: {
-    title: 'Community Guidelines — AntiRot | SMKAI Ventures',
+    title: 'Community Guidelines - AntiRot | SMKAI Ventures',
     description:
       'Community guidelines and copyright policy for AntiRot: respectful discussion, prohibited content, and reporting practices.',
     path: '/guidelines',
